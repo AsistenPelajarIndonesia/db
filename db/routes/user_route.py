@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from database_operations import user_operation
+from db.database_operations import user_operation
 from db.api_router import api_router
 
 class User(BaseModel):

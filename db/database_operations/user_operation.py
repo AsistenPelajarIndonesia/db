@@ -1,5 +1,6 @@
 from sqlalchemy import URL
 from sqlmodel import Field, SQLModel, create_engine, Session, select
+import os
 
 
 class User(SQLModel, table=True):
@@ -12,7 +13,7 @@ class User(SQLModel, table=True):
 connection_string = URL.create(
     'postgresql',
     username='admin',
-    password='VZXmrhLeU8D4',
+    password=os.environ["password"],
     host='ep-royal-meadow-a14stvyr.ap-southeast-1.pg.koyeb.app',
     database='koyebdb',
 )
